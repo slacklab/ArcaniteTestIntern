@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ArcaniteTestIntern" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fade TextField" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KRo-rZ-DtH">
+                                <rect key="frame" x="16" y="135" width="288" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input text" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mlz-0n-6Oj">
+                                <rect key="frame" x="16" y="225" width="288" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Mlz-0n-6Oj" secondAttribute="height" multiplier="343:30" id="fEf-E0-zP9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textFieldDidChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="mvD-bw-K3R"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqw-vO-Y2w">
+                                <rect key="frame" x="138.5" y="270" width="43" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Fade"/>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="fadeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rWx-DO-t6Q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KRo-rZ-DtH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6hL-XI-iza"/>
+                            <constraint firstItem="Mlz-0n-6Oj" firstAttribute="top" secondItem="KRo-rZ-DtH" secondAttribute="bottom" constant="54" id="8S1-Ur-Zk0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mlz-0n-6Oj" secondAttribute="trailing" constant="16" id="8TG-yI-U0o"/>
+                            <constraint firstItem="KRo-rZ-DtH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="KFQ-Pm-rgS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KRo-rZ-DtH" secondAttribute="trailing" constant="16" id="Mye-QD-H2k"/>
+                            <constraint firstItem="Mlz-0n-6Oj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QMT-23-FHg"/>
+                            <constraint firstItem="KRo-rZ-DtH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="115" id="bSH-Gu-QJE"/>
+                            <constraint firstItem="Pqw-vO-Y2w" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="c86-lU-yb6"/>
+                            <constraint firstItem="Pqw-vO-Y2w" firstAttribute="top" secondItem="Mlz-0n-6Oj" secondAttribute="bottom" constant="20" id="cw8-7A-i0P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fadeButton" destination="Pqw-vO-Y2w" id="GFM-d7-bAX"/>
+                        <outlet property="fadeLabel" destination="KRo-rZ-DtH" id="Vzg-R4-j1j"/>
+                        <outlet property="textField" destination="Mlz-0n-6Oj" id="Pqa-Bs-k74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
